@@ -1,0 +1,32 @@
+1.1) supposons qu'on veut définir une classe modélisant des réveille-matins qui n’ont plus de fonction ”sieste”,
+    donc on doit modifier plusieurs méthode dans cette classe (initiale) par supprimer les appels de sieste et les attributs
+    qui sont liés à sieste .
+
+1.2) si nous voulions définir une classe modélisant des réveille-matins dont le son du buzzer est
+    remplacé par un chant d’oiseau grâce à une classe ChantOiseau, on doit modifier la classe ReveilleMatin aussi en
+    ajoutant un attribut de type ChantOiseau par exemple.
+
+1.3) Imaginons que nous voulions définir une classe modélisant des réveille-matins qui affichent l’heure
+    différemment, par exemple en faisant clignoter le ” :” se trouvant entre les heures et les minutes. On doit modifier
+    la méthode tictac() dans la classe ReveilleMatin.
+
+1.4) La méthode void basculeReveil() permet de basculer d’un des trois états possibles du réveil à un
+    autre.Alors, si on décide d’ajouter, de modifier ou d’enlever un état, on doit modifier cette méthode par ajouter un
+    nouvel état.
+
+1.5) - le SRP est violé car cette classe se serve à plusieurs responsabilités différentes (calculer er afficher l'heure,
+       régler les sons, etc)
+     - le OCP est violé car si on veut ajouter/modifier/enlever quelque chose (attribut/ méthode/ fonctionnement/ etc),
+       on doit entrer et travailler directement dans cette classe complète.
+     - le DIP est violé car la classe ReveilleMatin dépend à 2 classe Buzzer et Radio, ce sont des modules de bas niveau
+
+2.1) les principes suivants sont bien respectés:
+    - SRP: chaque classe se serve à un responsabilité uniquement.
+    - OCP: lorsque le SRP était respecté, on sait que si on veut modifier quelque chose, on ne modifie que la classe/ interface
+    qui le gère.
+    - DIP: HorlogeReveille dépend à Reveille, Reveille dépend à Observateur.
+
+2.6) les principes suivants sont bien respectés:
+     - SRP: chaque classe se serve à un responsabilité uniquement.
+     - OCP: si on veut modifier quelque chose, on ne modifie que la classe/ interface qui le gère.
+     le principe de DIP est violé car
